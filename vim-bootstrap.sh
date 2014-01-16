@@ -5,15 +5,6 @@ set -e
 echoerr() {
     echo "$@" 1>&2
 }
-while true; do
-    echo "This script will erase your .vim directory and .vimrc file."
-    read -p "Will you really continue?" yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit;;
-            * ) echo "Please answer yes or no.";;
-    esac
-done
 
 command -v git
 if [ $? -ne 0 ]; then
